@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Set the character encoding for the document -->
+     <meta charset="UTF-8">
+     <!-- Set the viewport to make the website responsive -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Set the title of the webpage -->
+     <title>ToDo List</title>
+     <!-- Link to the external CSS file for styling -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Create a container for the todo list -->
+     <div id="todo-container">
+          <!-- ToDo list header -->
+          <div id="header">
+               <!-- Main heading for the todo list -->
+               <h1>ToDo List</h1>
+          </div>
+          <!-- Create input box and button -->
+          <div id="todo-form">
+               <!-- Input box for entering a new task -->
+               <input 
+               id="input-box"  
+               type="text" 
+               class="input-item"  
+               name="input_box"  
+               placeholder="Add Task"
+               />
+               <!-- Add button to add a new task -->
+               <button id="input-button" onclick="addTask()">Add</button>
+          </div>
+          <!-- Task list section -->
+          <h2>Task List</h2>
+          <!-- Unordered list to contain the tasks -->
+          <ul id="list-container"></ul>
+          <!-- Horizontal line to separate sections -->
+          <hr />
+     <!-- Task list counter section -->
+     <div class="counter-container">
+          <!-- Container for the task counters -->
+          <div id="task-counters">
+               <!-- Display the count of completed tasks -->
+               Completed: <span id="completed-counter">0</span>
+               <!-- Separator between counters -->
+               | 
+               <!-- Display the count of uncompleted tasks -->
+               Uncompleted: <span id="uncompleted-counter">0</span>
+          </div>
+     </div>
+     </div>
+     <!-- Link to the external JavaScript file for functionality -->
+     <script src="script.js"></script>
+</body>
+</html>
