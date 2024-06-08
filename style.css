@@ -1,7 +1,7 @@
 body {
      background: rgb(0,0,0);
      background: radial-gradient(circle, rgba(0,0,0,0.028124999999999956) 0%, rgba(253,187,45,1) 100%);
-     font-family: Arial, sans-serif;
+     font-family: 'Times New Roman', Times, serif;
      text-align: center;
      margin-top: 50px;
 }
@@ -10,41 +10,52 @@ body {
      background: rgb(41, 33, 33);
      width: 400px;
      margin: auto;
-     margin-top: 150px;
+     margin-top: 125px;
      border: 2px solid #0033ff;
      padding: 20px;
      color: white;
      border-radius: 15px;
 }
 
+#datetime {
+     display: flex;
+     justify-content: space-between;
+     align-items: left;
+     padding: 2px 10px 1px 10px;
+     font-size: 18px;
+     color: wheat;
+}
+
 #header {
      margin: 5px;
      font-size: 20px;
-     text-align: center;
+     text-align: left;
+     padding-left: 16px;
+     border-left: 5px solid rgba(253,187,45,1);
 }
 
 h1 {
-     margin-bottom: 20px;
+     margin-top: 20px;
 }
 
 #input-box {
-     width: 200px;
-     padding: 10px;
+     width: 250px;
+     padding: 15px;
      border: 1px solid #ccc;
-     border-radius: 5px;
+     border-radius: 15px;
      margin-right: 5px;
-     font-size: 20px;
+     font-size: 16px;
 }
 
 #input-button {
-     font-size: 20px;
+     font-size: 18px;
      color: white;
      cursor: pointer;
      transition: 0.4s;
-     padding: 10px;
+     padding: 15px;
      border: none;
-     border-radius: 5px;
-     background-color: #2e60ea;
+     border-radius: 15px;
+     background-color: #0033ff;
 }
 
 #input-button:hover {
@@ -60,20 +71,41 @@ ul {
 
 li {
      border: 1px solid white;
-     border-radius: 5px;
+     border-radius: 15px;
      margin-bottom: 10px;
-     padding: 10px;
+     padding: 15px;
      margin-top: 10px;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn, .delete-btn, .save-btn {
      float: right;
-     color: crimson;
+     color: whitesmoke;
      cursor: pointer;
-     margin: 3px 5px;
-     border: none;
-     padding: 3px 5px;
-     background: none;
+     margin: -4px 10px;
+     padding: 5px 10px;
+     background-color: #0033ff;
+     border: #0033ff;
+     border-radius: 5px;
+}
+
+.save-btn {
+     float: right;
+     color: whitesmoke;
+     cursor: pointer;
+     margin: -1px 10px;
+     padding: 5px 10px 5px;
+     background-color: #0033ff;
+     border: #0033ff;
+     border-radius: 5px;
+}
+
+.edit-input{
+     width: 150px;
+     padding: 4px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     margin-right: 2px;
+     font-size: 14px;
 }
 
 .completed {
@@ -82,18 +114,29 @@ li {
      border: 1px solid gray;
 }
 
+/* Add styles for draggable tasks */
+li[draggable="true"] {
+     cursor: move;
+ }
+ 
+ li[draggable="true"]:active {
+     cursor: move;
+ }
+ 
+ /* Highlight the drop target */
+ li.drag-over {
+     border: 2px dashed #000;
+ } 
+
 /* Responsiveness */
 
-@media (min-width: 320px) and (max-width: 480px) {
-     body {
-          margin-top: 50px;
-     }
+@media (min-width: 280px) and (max-width: 500px) {
+     
      #todo-container {
-          width: 280px;
-          margin: auto;
-          margin-top: 100px;
+          width: 400px;
+          margin-top: 90px;
      }
      #input-button {
-          margin-top: 15px;
+          margin-top: 5px;
      }
 }

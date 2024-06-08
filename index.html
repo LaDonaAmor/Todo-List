@@ -9,10 +9,17 @@
      <title>ToDo List</title>
      <!-- Link to the external CSS file for styling -->
      <link rel="stylesheet" href="style.css">
+     <!-- Link to the external JS file -->
+     <script src="script.js" defer></script>
 </head>
 <body>
      <!-- Create a container for the todo list -->
      <div id="todo-container">
+          <!-- Current date and time -->
+          <div id="datetime">
+               <p id="date"></p>
+               <p id="time"></p>
+          </div>
           <!-- ToDo list header -->
           <div id="header">
                <!-- Main heading for the todo list -->
@@ -26,13 +33,13 @@
                type="text" 
                class="input-item"  
                name="input_box"  
-               placeholder="Add Task"
+               placeholder="What do you have planned?"
                />
                <!-- Add button to add a new task -->
                <button id="input-button" onclick="addTask()">Add</button>
           </div>
           <!-- Task list section -->
-          <h2>Task List</h2>
+          <h2>Your Task List</h2>
           <!-- Unordered list to contain the tasks -->
           <ul id="list-container"></ul>
           <!-- Horizontal line to separate sections -->
@@ -51,6 +58,5 @@
      </div>
      </div>
      <!-- Link to the external JavaScript file for functionality -->
-     <script src="script.js"></script>
 </body>
 </html>
